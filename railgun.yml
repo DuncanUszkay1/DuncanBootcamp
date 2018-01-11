@@ -1,0 +1,16 @@
+name: onboarding
+
+vm:
+  image:      /opt/dev/misc/railgun-images/default
+  ip_address: 192.168.64.2
+  memory:     2G
+  cores:      2
+
+volumes:
+  root:  '4G'
+
+services:
+  - nginx
+
+hostnames:
+  - rentals.myshopify.io: { proxy_to_host_port: 3084 }

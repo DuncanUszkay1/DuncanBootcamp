@@ -1,0 +1,17 @@
+name: onboarding
+
+up:
+  - homebrew:
+    - openssl
+  - ruby:
+      version: 2.4.3
+  - railgun
+  - bundler
+
+commands:
+  console:
+    desc:   'Start a rails console'
+    run:    bin/rails console
+  server:
+    desc:   'Start the server'
+    run:    bundle exec rails s -p 3084 -b 0.0.0.0
